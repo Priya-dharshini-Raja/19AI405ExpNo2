@@ -61,28 +61,27 @@ Now, the Stack becomes empty, which means we have visited all the nodes, and our
 '''Depth First Search uses STACK AND RECURSION<br/>
 '''
 #import defaultdict<br/>
-from collections import defaultdict<br/>
-def dfs(graph,start,visited,path):<br/>
-    path.append(start)<br/>
-    visited[start]=True<br/>
-    for neighbour in graph[start]:<br/>
-        if visited[neighbour]==False:<br/>
-            dfs(graph,neighbour,visited,path)<br/>
-            visited[neighbour]=True<br/>
-    return path<br/>
-graph=defaultdict(list)<br/>
-n,e=map(int, input().split())<br/>
-for i in range(e):<br/>
-    u,v=map(str,input().split())<br/>
-    graph[u].append(v)<br/>
-    graph[v].append(u)<br/>
+from collections import defaultdict
+def dfs(graph,start,visited,path):
+    path.append(start)
+    visited[start]=True
+    for neighbour in graph[start]:
+        if visited[neighbour]==False:
+            dfs(graph,neighbour,visited,path)
+            visited[neighbour]=True
+    return path
+graph=defaultdict(list)
+n,e=map(int, input().split())
+for i in range(e):
+    u,v=map(str,input().split())
+    graph[u].append(v)
+    graph[v].append(u)
 #print(graph)<br/>
-start='A'<br/>
-visited=default(bool)<br/>
-path=[]<br/>
-traversedpath=dfs(grph,start,visited,path)<br/>
-print(traversedpath)<br/>
-
+start='A'
+visited=default(bool)
+path=[]
+traversedpath=dfs(grph,start,visited,path)
+print(traversedpath)
 
 <h3>Sample Input</h3>
 <hr>
