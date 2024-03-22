@@ -58,7 +58,8 @@ Now, the Stack becomes empty, which means we have visited all the nodes, and our
 
 <h3>PROGRAM</h3>
 
-'''Depth First Search uses STACK AND RECURSION<br/>
+'''
+Depth First Search uses STACK AND RECURSION<br/>
 
 #import defaultdict<br/>
 from collections import defaultdict
